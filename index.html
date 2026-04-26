@@ -14,6 +14,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- n8n Chat widget styles -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
+
 <style>
   :root {
     --bg: #f7f3ec;
@@ -295,6 +298,54 @@
     .vision .container { grid-template-columns: 1fr; }
     .topnav { gap: 14px; font-size: 13px; }
     section { padding: 48px 20px; }
+  }
+
+  /* ---- n8n Chat widget — theme override ---- */
+  :root {
+    --chat--color-primary: var(--saudi);
+    --chat--color-primary-shade-50: var(--saudi-deep);
+    --chat--color-primary-shade-100: #003a1c;
+    --chat--color-secondary: var(--gold);
+    --chat--color-secondary-shade-50: #8a6932;
+    --chat--color-white: #ffffff;
+    --chat--color-light: var(--bg);
+    --chat--color-light-shade-50: var(--bg-soft);
+    --chat--color-light-shade-100: var(--rule);
+    --chat--color-medium: var(--rule);
+    --chat--color-dark: var(--ink);
+    --chat--color-disabled: #9a9a9a;
+    --chat--color-typing: var(--ink-soft);
+
+    --chat--spacing: 1rem;
+    --chat--border-radius: 6px;
+    --chat--transition-duration: 0.18s;
+
+    --chat--window--width: 380px;
+    --chat--window--height: 600px;
+
+    --chat--header--background: var(--ink);
+    --chat--header--color: var(--bg);
+    --chat--header--padding: 1.25rem;
+    --chat--heading--font-size: 1.1rem;
+    --chat--subtitle--font-size: 0.85rem;
+    --chat--subtitle--line-height: 1.5;
+
+    --chat--message--font-size: 0.95rem;
+    --chat--message--padding: 0.85rem 1rem;
+    --chat--message--border-radius: 8px;
+    --chat--message-line-height: 1.55;
+    --chat--message--bot--background: var(--bg-soft);
+    --chat--message--bot--color: var(--ink);
+    --chat--message--bot--border: 1px solid var(--rule);
+    --chat--message--user--background: var(--saudi);
+    --chat--message--user--color: #ffffff;
+    --chat--message--user--border: none;
+
+    --chat--toggle--background: var(--ink);
+    --chat--toggle--hover--background: var(--saudi-deep);
+    --chat--toggle--active--background: var(--saudi);
+    --chat--toggle--color: var(--bg);
+    --chat--toggle--size: 56px;
   }
 </style>
 </head>
@@ -700,6 +751,32 @@
     <span class="ar">المحتوى للأغراض المعلوماتية فقط.</span>
   </div>
 </footer>
+
+<!-- n8n Chat widget -->
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://narvis.app.n8n.cloud/webhook/b585e92b-9774-4f27-9c53-ae7b6205d5f2/chat',
+    mode: 'window',
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Salam · Witaj 👋',
+      'Zapytaj mnie o współpracę Polska–Arabia Saudyjska: regulacje (SAMA, ZATCA, RHQ), sektory wzrostu, kontakty instytucjonalne.'
+    ],
+    i18n: {
+      en: {
+        title: 'Polska ⇄ KSA',
+        subtitle: 'Asystent AI · pytania o współpracę PL–Arabia Saudyjska.',
+        footer: '',
+        getStarted: 'Nowa rozmowa',
+        inputPlaceholder: 'Napisz pytanie po polsku, angielsku lub arabsku…',
+        closeButtonTooltip: 'Zamknij'
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
