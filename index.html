@@ -1,17 +1,705 @@
 <!DOCTYPE html>
 <html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polska — Arabia Saudyjska · Most Współpracy / جسر التعاون</title>
+<meta name="description" content="Praktyczny przewodnik po współpracy Polska–Arabia Saudyjska: sektory, regulacje (SAMA, ZATCA, RHQ, Saudization), Vision 2030 i wejście polskich firm na rynek KSA.">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tytuł strony</title>
-  </head>
+<meta property="og:title" content="Polska — Arabia Saudyjska · Most Współpracy">
+<meta property="og:description" content="Współpraca gospodarcza Polska–KSA: kierunki, regulacje, kontakty.">
+<meta property="og:type" content="website">
 
-  <body>
-	  <h1>Moja pierwsza strona www</h1>
-    <h2>Tu idzie treść naszej strony.</h2>
-    <p>Tu idzie dalsza treść naszej strony. 1 ph </p>
-	     <p>Tu idzie czwarta cześć treść naszej strony. 1 ph </p>
-  </body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
+<style>
+  :root {
+    --bg: #f7f3ec;
+    --bg-soft: #efe9de;
+    --ink: #1a1d1a;
+    --ink-soft: #4a4e48;
+    --rule: #d9d2c2;
+    --saudi: #006c35;
+    --saudi-deep: #004d25;
+    --polish: #c8253c;
+    --gold: #a07a3c;
+    --max: 1180px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--saudi-deep); text-underline-offset: 3px; }
+  a:hover { color: var(--polish); }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin: 0 0 0.5em;
+  }
+
+  .ar { font-family: 'Amiri', serif; direction: rtl; }
+
+  /* ---- Top bar ---- */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(8px);
+    background: rgba(247, 243, 236, 0.92);
+  }
+  .topbar-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .brand {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px;
+    text-decoration: none; color: var(--ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-bar {
+    display: inline-flex; height: 14px; width: 28px;
+    border: 1px solid var(--rule); overflow: hidden;
+  }
+  .brand-bar span { flex: 1; }
+  .brand-bar .pl-w { background: #fff; }
+  .brand-bar .pl-r { background: var(--polish); }
+  .brand-bar .sa { background: var(--saudi); }
+
+  .topnav { display: flex; gap: 22px; flex-wrap: wrap; }
+  .topnav a {
+    color: var(--ink-soft); text-decoration: none; font-size: 14px;
+    font-weight: 500; letter-spacing: 0.01em;
+  }
+  .topnav a:hover { color: var(--polish); }
+
+  /* ---- Hero ---- */
+  .hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 80px 24px 60px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: end;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--saudi-deep);
+    font-weight: 500;
+  }
+  .hero-sub {
+    font-size: 1.15rem; color: var(--ink-soft);
+    max-width: 56ch; margin: 0 0 32px;
+  }
+  .hero-ar {
+    font-size: 1.6rem; line-height: 1.5;
+    color: var(--ink); border-right: 3px solid var(--saudi);
+    padding: 8px 18px 8px 0; margin: 0;
+  }
+  .hero-ar small {
+    display: block; font-family: 'Manrope', sans-serif;
+    direction: ltr; font-size: 0.7rem; color: var(--ink-soft);
+    margin-top: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* ---- Section frame ---- */
+  section { padding: 64px 24px; }
+  .container { max-width: var(--max); margin: 0 auto; }
+
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--gold);
+  }
+
+  h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); max-width: 22ch; }
+  h3 { font-size: 1.2rem; margin-top: 0; }
+
+  .lead { font-size: 1.08rem; color: var(--ink-soft); max-width: 70ch; }
+
+  /* ---- Two-column reading ---- */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 40px;
+  }
+  .two-col article {
+    border-top: 2px solid var(--ink);
+    padding-top: 24px;
+  }
+  .two-col article.right { border-top-color: var(--saudi); }
+  .two-col article.left { border-top-color: var(--polish); }
+
+  .flag-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 2px;
+    color: #fff; margin-bottom: 18px;
+  }
+  .flag-tag.pl { background: var(--polish); }
+  .flag-tag.sa { background: var(--saudi); }
+
+  /* ---- Sectors grid ---- */
+  .sectors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 40px;
+  }
+  .sector {
+    background: var(--bg);
+    padding: 28px 26px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background 0.2s;
+  }
+  .sector:hover { background: var(--bg-soft); }
+  .sector-num {
+    font-family: 'Fraunces', serif; font-style: italic;
+    color: var(--gold); font-size: 0.95rem;
+    display: block; margin-bottom: 8px;
+  }
+  .sector h3 { font-size: 1.15rem; margin-bottom: 10px; }
+  .sector p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+
+  /* ---- Regulations details ---- */
+  .reg-list { margin-top: 32px; border-top: 1px solid var(--rule); }
+  details.reg {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 0;
+  }
+  details.reg summary {
+    cursor: pointer; font-weight: 600; font-size: 1.05rem;
+    list-style: none; display: flex; justify-content: space-between;
+    align-items: center; gap: 16px;
+  }
+  details.reg summary::-webkit-details-marker { display: none; }
+  details.reg summary::after {
+    content: "+"; font-family: 'Fraunces', serif;
+    font-size: 1.6rem; color: var(--saudi); font-weight: 400;
+    transition: transform 0.2s;
+  }
+  details.reg[open] summary::after { content: "−"; }
+  details.reg .reg-body {
+    padding-top: 14px; color: var(--ink-soft);
+    max-width: 75ch;
+  }
+  details.reg .reg-body a { word-break: break-word; }
+
+  /* ---- Resources ---- */
+  .resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 36px;
+  }
+  .res-group h3 {
+    font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink); padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink); margin-bottom: 16px;
+  }
+  .res-group ul { list-style: none; padding: 0; margin: 0; }
+  .res-group li { padding: 8px 0; border-bottom: 1px dotted var(--rule); }
+  .res-group li:last-child { border-bottom: 0; }
+  .res-group a { display: block; line-height: 1.4; }
+  .res-group .res-desc {
+    font-size: 0.82rem; color: var(--ink-soft);
+    display: block; margin-top: 2px;
+  }
+
+  /* ---- Pull quote / vision ---- */
+  .vision {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 80px 24px;
+    margin: 80px 0 0;
+  }
+  .vision .container {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+  }
+  .vision .eyebrow { color: var(--gold); }
+  .vision .eyebrow::before { background: var(--gold); }
+  .vision h2 {
+    color: var(--bg); font-size: clamp(2rem, 3.5vw, 3rem);
+    max-width: 18ch;
+  }
+  .vision p { color: rgba(247, 243, 236, 0.78); }
+  .vision a { color: var(--gold); }
+  .stats {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px; background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .stat {
+    background: var(--ink); padding: 28px 24px;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif; font-size: 2.4rem;
+    color: var(--bg); display: block; line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-label {
+    font-size: 0.78rem; color: rgba(247, 243, 236, 0.6);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* ---- Footer ---- */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 24px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  footer .container {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+  }
+  footer .ar { font-size: 1rem; }
+
+  /* ---- Mobile ---- */
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 48px 20px 40px; }
+    .two-col { grid-template-columns: 1fr; gap: 40px; }
+    .vision .container { grid-template-columns: 1fr; }
+    .topnav { gap: 14px; font-size: 13px; }
+    section { padding: 48px 20px; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-bar" aria-hidden="true">
+        <span class="pl-w"></span><span class="pl-r"></span><span class="sa"></span>
+      </span>
+      PL ⇄ KSA
+    </a>
+    <nav class="topnav" aria-label="Główna nawigacja">
+      <a href="#dla-polakow">Dla Polaków</a>
+      <a href="#dla-saudyjczykow">للسعوديين</a>
+      <a href="#sektory">Sektory</a>
+      <a href="#regulacje">Regulacje</a>
+      <a href="#zasoby">Zasoby</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Polska · Arabia Saudyjska · 2026</p>
+      <h1>Most między Wisłą <em>a Półwyspem Arabskim</em>.</h1>
+      <p class="hero-sub">
+        Praktyczny przewodnik po współpracy gospodarczej Polska–Królestwo Arabii Saudyjskiej:
+        regulacje, sektory wzrostu, kontakty instytucjonalne. Dla polskich firm wchodzących
+        na rynek KSA i dla saudyjskich partnerów rozważających inwestycje w UE przez Polskę.
+      </p>
+    </div>
+    <blockquote class="hero-ar ar">
+      جسرٌ بين بولندا والمملكة العربية السعودية —
+      شراكةٌ تجمع رؤية ٢٠٣٠ بقوة الاقتصاد البولندي ضمن الاتحاد الأوروبي.
+      <small>Bridge between Poland and the Kingdom — Vision 2030 meets EU access.</small>
+    </blockquote>
+  </section>
+
+  <!-- DLA POLAKÓW -->
+  <!-- DLA SAUDYJCZYKÓW -->
+  <section id="dla-polakow">
+    <div class="container">
+      <p class="eyebrow">Perspektywy</p>
+      <h2>Dwie strony, jeden interes.</h2>
+      <p class="lead">
+        Współpraca PL–KSA przeszła w ostatniej dekadzie z relacji handlowej w strategiczną.
+        Polska szuka rynków eksportowych i kontraktów inżynierskich; Arabia Saudyjska
+        — kompetencji technologicznych spoza dominujących dostawców i bramy do UE.
+      </p>
+
+      <div class="two-col">
+        <article class="left">
+          <span class="flag-tag pl">Dla polskich firm</span>
+          <h3>Co naprawdę otwiera Vision 2030</h3>
+          <p>
+            <a href="https://www.vision2030.gov.sa/" target="_blank" rel="noopener">Vision 2030</a>
+            to nie hasło marketingowe — to budżet. Saudyjski PIF zarządza aktywami rzędu
+            ponad biliona dolarów i finansuje gigaprojekty (NEOM, Red Sea, Diriyah, Qiddiya)
+            oraz transformację bankowości, energetyki i sektora publicznego.
+          </p>
+          <p>
+            Najszybciej rosnące szanse dla polskich dostawców: <strong>fintech i bankowość
+            cyfrowa</strong> (UX, mobile, core modernization), <strong>cyberbezpieczeństwo</strong>,
+            <strong>green tech</strong> (zielony wodór, OZE), <strong>obronność i dual-use</strong>,
+            <strong>agri-food</strong> (Polska to największy eksporter żywności w UE),
+            <strong>infrastruktura inżynierska</strong>.
+          </p>
+          <p>
+            Realna bariera wejścia to nie język ani kultura — to <strong>konieczność
+            lokalnego partnera</strong>. Bez saudyjskiego sponsora w sektorach regulowanych
+            (banki, telekomy, sektor publiczny) ofertę odrzuca się na poziomie procurementu.
+            Drugi próg: <a href="#rhq">Regional Headquarters Program</a>.
+          </p>
+        </article>
+
+        <article id="dla-saudyjczykow" class="right">
+          <span class="flag-tag sa">للقارئ السعودي · For Saudi readers</span>
+          <h3 class="ar" style="text-align: right; font-family: 'Amiri', serif; font-size: 1.5rem;">
+            لماذا بولندا؟
+          </h3>
+          <p>
+            Poland is the EU's 6th-largest economy and one of only a handful that has grown
+            uninterruptedly for over three decades. Membership in the
+            <a href="https://european-union.europa.eu/" target="_blank" rel="noopener">European Union</a>,
+            NATO, and the OECD makes it a stable, rules-based gateway to a 450-million-consumer
+            single market.
+          </p>
+          <p>
+            For Saudi investors and corporates, three advantages stand out:
+            <strong>technology talent at competitive cost</strong> (Poland is the largest IT
+            services hub in CEE — companies like Comarch, Asseco, Allegro, CD Projekt are
+            globally recognized), <strong>banking technology depth</strong> (Polish retail
+            banks are among the most digitally mature worldwide — mBank, ING Polska,
+            Santander BP), and a <strong>1–2 hour time-zone overlap with Riyadh</strong>
+            enabling true co-delivery, not just offshore handoff.
+          </p>
+          <p class="ar" style="font-size: 1.1rem; color: var(--ink); border-right: 2px solid var(--saudi); padding-right: 14px;">
+            بولندا توفر بوابةً موثوقة إلى السوق الأوروبية، مع كفاءاتٍ تقنيةٍ عاليةٍ بتكلفةٍ تنافسية،
+            واستقرارٍ سياسيٍ واقتصاديٍ يمتدّ لأكثر من ثلاثة عقود.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION 2030 BLOCK -->
+  <section class="vision">
+    <div class="container">
+      <div>
+        <p class="eyebrow">Skala</p>
+        <h2>Vision 2030 to budżet, nie slogan.</h2>
+        <p>
+          Saudyjski Public Investment Fund należy do największych funduszy państwowych
+          świata. Trzy gigaprojekty (NEOM, Red Sea, Diriyah) razem przewyższają roczny
+          PKB większości państw europejskich. Polskie firmy są już w łańcuchu dostaw —
+          pytanie nie brzmi „czy", tylko „jakim kanałem".
+        </p>
+        <p>
+          <a href="https://www.pif.gov.sa/" target="_blank" rel="noopener">Public Investment Fund →</a>
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num">~$925B</span>
+          <span class="stat-label">PIF assets under management</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2030</span>
+          <span class="stat-label">Horyzont Saudi Vision</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6.</span>
+          <span class="stat-label">Pozycja Polski w UE (PKB)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">~30%</span>
+          <span class="stat-label">Saudization w sektorze IT (Nitaqat)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTORY -->
+  <section id="sektory">
+    <div class="container">
+      <p class="eyebrow">Kierunki współpracy</p>
+      <h2>Siedem obszarów, w których partnerstwo działa.</h2>
+      <p class="lead">
+        Lista oparta na realnym przepływie kontraktów ostatnich 3 lat — nie na życzeniach
+        izb gospodarczych. Każdy obszar ma istniejące polskie referencje w Zatoce.
+      </p>
+
+      <div class="sectors">
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">01 / Finance</span>
+          <h3>Bankowość cyfrowa i fintech</h3>
+          <p>Mobile UX, core modernization, AI w obsłudze klienta. Regulator: SAMA.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">02 / Defense</span>
+          <h3>Obronność i dual-use</h3>
+          <p>WB Group, PGZ — UAV, radary, systemy łączności. Eksport licencjonowany.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">03 / Green</span>
+          <h3>Zielony wodór i OZE</h3>
+          <p>NEOM Helios, projekty solarne. Polskie kompetencje: inżynieria, EPC.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">04 / Agri-food</span>
+          <h3>Eksport żywności</h3>
+          <p>Halal-certified mięso, mleko, przetwory. Polska — #1 eksporter żywności UE.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">05 / IT</span>
+          <h3>IT services i nearshoring</h3>
+          <p>Software house'y, custom dev, cyber. Time zone overlap z Riyadem.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">06 / Infra</span>
+          <h3>Infrastruktura i inżynieria</h3>
+          <p>Drogi, kolej, wod-kan. Polskie firmy w łańcuchach gigaprojektów.</p>
+        </a>
+        <a class="sector" href="#regulacje">
+          <span class="sector-num">07 / Tourism</span>
+          <h3>Hospitality i edukacja</h3>
+          <p>Red Sea, Diriyah — kadry, projektowanie obiektów. Wymiana akademicka.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGULACJE -->
+  <section id="regulacje" style="background: var(--bg-soft);">
+    <div class="container">
+      <p class="eyebrow">Co trzeba wiedzieć przed wejściem</p>
+      <h2>Regulacje, których nie da się obejść.</h2>
+      <p class="lead">
+        Najczęstszy błąd polskich firm: traktowanie KSA jak Emiratów. Saudyjski reżim
+        regulacyjny jest bardziej protekcjonistyczny i dynamicznie zmienia zasady gry.
+      </p>
+
+      <div class="reg-list">
+        <details class="reg" id="rhq">
+          <summary>Regional Headquarters Program (RHQ) — od 2024 obowiązkowy</summary>
+          <div class="reg-body">
+            Od 1 stycznia 2024 roku zagraniczne firmy ubiegające się o kontrakty publiczne
+            w KSA muszą posiadać <strong>regionalną siedzibę w Rijadzie</strong>. Bez RHQ
+            zamówienia rządowe są niedostępne (z wyjątkami progu wartości i sektorów).
+            Program oferuje 30-letnie zwolnienie z CIT i ulgi w Saudization.
+            <br><br>
+            <a href="https://investsaudi.sa/en/sectors-opportunities/regional-headquarters/" target="_blank" rel="noopener">
+              Invest Saudi: RHQ Program ↗
+            </a>
+          </div>
+        </details>
+
+        <details class="reg">
+          <summary>SAMA — outsourcing IT i fintech</summary>
+          <div class="reg-body">
+            Saudi Central Bank (SAMA) reguluje outsourcing usług IT przez banki.
+            Polski dostawca nie obsłuży saudyjskiego banku bez zgody SAMA i często
+            bez lokalnego data center / partnera. Wymogi obejmują rezydencję danych,
+            audyty, prawo regulatora do inspekcji u podwykonawcy.
+            <br><br>
+            <a href="https://www.sama.gov.sa/en-US/Laws/Pages/default.aspx" target="_blank" rel="noopener">
+              SAMA — Laws & Regulations ↗
+            </a>
+          </div>
+        </details>
+
+        <details class="reg">
+          <summary>Saudization (Nitaqat) — kwoty zatrudnienia Saudyjczyków</summary>
+          <div class="reg-body">
+            Każdy podmiot z licencją MISA (dawne SAGIA) podlega kwotom zatrudnienia
+            obywateli saudyjskich. W IT i bankowości progi sięgają 25–35% i rosną.
+            Kategorie Nitaqat: <em>Platinum, High Green, Mid Green, Low Green, Red</em>
+            — kategoria Red blokuje nowe wizy pracownicze.
+            <br><br>
+            <a href="https://www.hrsd.gov.sa/" target="_blank" rel="noopener">
+              Ministry of Human Resources ↗
+            </a>
+          </div>
+        </details>
+
+        <details class="reg">
+          <summary>ZATCA — VAT i e-fakturowanie (FATOORA)</summary>
+          <div class="reg-body">
+            VAT 15%. Obowiązkowe e-fakturowanie w systemie FATOORA — Phase 2 oznacza
+            integrację ERP dostawcy z platformą ZATCA w czasie rzeczywistym.
+            Brak zgodności = brak możliwości fakturowania saudyjskich klientów.
+            <br><br>
+            <a href="https://zatca.gov.sa/en/E-Invoicing/Pages/default.aspx" target="_blank" rel="noopener">
+              ZATCA — E-Invoicing ↗
+            </a>
+          </div>
+        </details>
+
+        <details class="reg">
+          <summary>Kultura biznesowa — relacje przed kontraktem</summary>
+          <div class="reg-body">
+            Decyzje zapadają hierarchicznie i w oparciu o zaufanie zbudowane przez
+            wielokrotne wizyty. <em>Tydzień pracy: niedziela–czwartek</em>. Pięć przerw
+            modlitewnych dziennie wstrzymuje spotkania. Poczas Ramadanu efektywne godziny
+            pracy są krótsze. Odbiorcami decyzji są często osoby nieobecne w call'ach —
+            obecność fizyczna w Rijadzie buduje deal pipeline szybciej niż dwa lata
+            zdalnych prezentacji.
+          </div>
+        </details>
+
+        <details class="reg">
+          <summary>Eksport towarów — certyfikacja SASO i halal</summary>
+          <div class="reg-body">
+            Saudi Standards, Metrology and Quality Organization (SASO) wymaga certyfikacji
+            SABER dla większości towarów importowanych. Żywność wymaga dodatkowo
+            certyfikacji halal akceptowanej przez SFDA (Saudi Food & Drug Authority).
+            <br><br>
+            <a href="https://saber.sa/" target="_blank" rel="noopener">SABER Platform ↗</a>
+            ·
+            <a href="https://www.sfda.gov.sa/en" target="_blank" rel="noopener">SFDA ↗</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZASOBY -->
+  <section id="zasoby">
+    <div class="container">
+      <p class="eyebrow">Kontakty i instytucje</p>
+      <h2>Zasoby — od czego zacząć.</h2>
+      <p class="lead">
+        Kolejność działania: zacznij od PAIH (Polska) lub Invest Saudi (KSA) — następnie
+        izby gospodarcze, dopiero potem ambasady (te są od spraw konsularnych i polityki,
+        nie od leadów handlowych).
+      </p>
+
+      <div class="resources">
+
+        <div class="res-group">
+          <h3>Strona polska</h3>
+          <ul>
+            <li>
+              <a href="https://www.paih.gov.pl/" target="_blank" rel="noopener">PAIH</a>
+              <span class="res-desc">Polska Agencja Inwestycji i Handlu — wsparcie eksportu i ekspansji</span>
+            </li>
+            <li>
+              <a href="https://www.gov.pl/web/arabiasaudyjska" target="_blank" rel="noopener">Ambasada RP w Rijadzie</a>
+              <span class="res-desc">Wydział polityczno-ekonomiczny, sprawy konsularne</span>
+            </li>
+            <li>
+              <a href="https://www.gov.pl/web/dyplomacja" target="_blank" rel="noopener">MSZ — kierunek bliskowschodni</a>
+              <span class="res-desc">Polityka zagraniczna i bilateralne ramy współpracy</span>
+            </li>
+            <li>
+              <a href="https://www.gov.pl/web/rozwoj-technologia" target="_blank" rel="noopener">MRiT</a>
+              <span class="res-desc">Ministerstwo Rozwoju i Technologii — programy wsparcia</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="res-group">
+          <h3>Strona saudyjska</h3>
+          <ul>
+            <li>
+              <a href="https://investsaudi.sa/" target="_blank" rel="noopener">Invest Saudi (MISA)</a>
+              <span class="res-desc">Ministry of Investment — licencje dla zagranicznych firm</span>
+            </li>
+            <li>
+              <a href="https://www.vision2030.gov.sa/" target="_blank" rel="noopener">Vision 2030</a>
+              <span class="res-desc">Oficjalny portal programu transformacji</span>
+            </li>
+            <li>
+              <a href="https://www.pif.gov.sa/" target="_blank" rel="noopener">Public Investment Fund</a>
+              <span class="res-desc">PIF — saudyjski fundusz państwowy, sponsor gigaprojektów</span>
+            </li>
+            <li>
+              <a href="https://mc.gov.sa/en" target="_blank" rel="noopener">Ministry of Commerce</a>
+              <span class="res-desc">Rejestracja podmiotów, prawo handlowe</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="res-group">
+          <h3>Izby i sieci</h3>
+          <ul>
+            <li>
+              <a href="https://csc.org.sa/English/Pages/default.aspx" target="_blank" rel="noopener">Federation of Saudi Chambers</a>
+              <span class="res-desc">Centralna federacja izb handlowych KSA</span>
+            </li>
+            <li>
+              <a href="https://kig.pl/" target="_blank" rel="noopener">Krajowa Izba Gospodarcza</a>
+              <span class="res-desc">Misje handlowe, networking, dokumenty eksportowe</span>
+            </li>
+            <li>
+              <a href="https://www.bgk.pl/" target="_blank" rel="noopener">BGK — finansowanie eksportu</a>
+              <span class="res-desc">Bank Gospodarstwa Krajowego, kredyty eksportowe</span>
+            </li>
+            <li>
+              <a href="https://kuke.com.pl/" target="_blank" rel="noopener">KUKE</a>
+              <span class="res-desc">Ubezpieczenia eksportowe na rynki podwyższonego ryzyka</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="res-group">
+          <h3>Regulatorzy KSA</h3>
+          <ul>
+            <li>
+              <a href="https://www.sama.gov.sa/" target="_blank" rel="noopener">SAMA</a>
+              <span class="res-desc">Saudi Central Bank — bankowość, fintech, ubezpieczenia</span>
+            </li>
+            <li>
+              <a href="https://zatca.gov.sa/" target="_blank" rel="noopener">ZATCA</a>
+              <span class="res-desc">Zakat, podatki, cła, e-fakturowanie</span>
+            </li>
+            <li>
+              <a href="https://www.cma.org.sa/en/" target="_blank" rel="noopener">CMA</a>
+              <span class="res-desc">Capital Market Authority — rynek kapitałowy</span>
+            </li>
+            <li>
+              <a href="https://www.cst.gov.sa/en/" target="_blank" rel="noopener">CST</a>
+              <span class="res-desc">Communications, Space & Technology Commission</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 · Polska ⇄ KSA. Treść informacyjna, nie stanowi porady prawnej.</span>
+    <span class="ar">المحتوى للأغراض المعلوماتية فقط.</span>
+  </div>
+</footer>
+
+</body>
 </html>
